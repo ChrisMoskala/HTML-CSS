@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+<title>Catsby</title>
+
+<meta name="description" content="Serwis o grach"/>
+<meta name="keywords" content="gry, bijatyki, gaming, gamer, retrogranie"/>
+<link href="style_3.css" rel="stylesheet" type="text/css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+<link href="fontello.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="header">
+        <div class="logo">
+            <img src="pad.png" style="float:left;"/>
+            <span style=color:#c34f4f;>Kiedyś</span> to było
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+    <div class="nav">
+        <ol>
+            <li>
+                <a href="#">stronga główna</a>
+            </li>
+            <li>
+                <a href="#">klasyki nes</a>
+                <ul>
+                   <li><a href="#">Contra</a></li>
+                   <li><a href="#">Zelda</a></li> 
+                   <li><a href="#">Mario</a></li> 
+                </ul>
+            </li>
+            <li>
+                <a href="#">gry filmowe</a>
+                <ul>
+                <li><a href="#">Home alone</a></li> 
+                <li><a href="#">Duck tales</a></li> 
+                <li><a href="#">Top gun</a></li> 
+                </ul>
+            </li>
+            <li>
+                <a href="#">bijatyki</a>
+                <ul>
+                <li><a href="#">Mortal kombat</a></li> 
+                <li><a href="#">Dead or alive</a></li> 
+                <li><a href="#">tekken</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">gry sportowe</a>
+                <ul>
+                <li><a href="#">goal 3</a></li> 
+                <li><a href="#">xcitebike</a></li> 
+                <li><a href="#">tennis</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">o autorach</a>
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <p>Kiedyś to było - się grało po nocach, nie to co teraz...</p>
+        <p>Się programować zachciało, a nie jak syn ciotki teściowej ze strony szwagra na wojskowego iść...</p>
+    </div>
+    <div class="socials">
+        <div class="socialdivs">
+            <div class="fb"><i class="icon-facebook"></i></div>
+            <div class="yt"><i class="icon-youtube"></i></div>
+            <div class="tw"><i class="icon-twitter"></i></div>
+            <div class="gplus"><i class="icon-gplus"></i></div>
+            <div style="clear: both;"></div>
+        </div>
+
+    </div>
+    <div class="footer">Retrogranie.com &copy; 2022 Thank you for your visit Mario! But our Princess is in another castle :c</div>
+    </div>
+    <script src="jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var NavY = $('.nav').offset().top;
+            var stickyNav = function(){
+            var ScrollY = $(window).scrollTop();
+                if (ScrollY > NavY) {
+                    $('.nav').addClass('sticky');
+                } else {
+                    $('.nav').removeClass('sticky');
+                }
+                };
+                  stickyNav();
+                  $(window).scroll(function(){
+                      stickyNav();
+                  });  
+                });
+    </script>
+</body>
+</html>
